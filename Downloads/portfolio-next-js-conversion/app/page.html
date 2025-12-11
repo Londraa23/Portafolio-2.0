@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web Profesional | Pablo Estévez</title>
+    <meta name="description" content="Creo sitios web modernos y profesionales para tu negocio. Desde páginas de presentación hasta plataformas completas, con diseño a medida.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/pablo_logo.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <img src="./img/pablo_logo.png" alt="Logo" class="logo-img logo-dark">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#services" class="nav-link">Servicios</a></li>
+                    <li><a href="#projects" class="nav-link">Portafolio</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link btn-primary-small">Contactar</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <!-- Eliminado el botón de cambio de tema -->
+                    <button class="btn-primary-small" onclick="openContactModal()">
+                        Empezar Proyecto
+                    </button>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="card hero-card">
+                <div class="hero-gradient"></div>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="badge">
+                            <svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                            </svg>
+                            <span>Desarrollo Web Profesional</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            <span class="hero-title-main">Transforma tu negocio con tu página</span>
+                            <span class="hero-title-accent"> Web Profesional</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Creo sitios web modernos y profesionales para tu negocio. Desde páginas de presentación hasta plataformas completas, con diseño a medida y tecnología de última generación.
+                        </p>
+
+                        <div class="hero-actions">
+                            <button class="btn-primary" onclick="openContactModal()">Empezar proyecto</button>
+                            <a href="#services" class="btn-secondary">
+                                Ver servicios
+                                <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <div class="hero-image-glow"></div>
+                        <img src="/img/purple_wave.png" alt="Desarrollo Web Profesional" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <div class="badge">Cómo trabajo</div>
+                <h2 class="section-title">
+                    <span class="section-title-main">Impulsa tu presencia digital</span>
+                    <span class="section-title-accent">Con Desarrollo Web Profesional</span>
+                </h2>
+                <p class="section-description">
+                    Creo sitios web a medida que ayudan a tu negocio a crecer. Desde landing pages hasta tiendas online, creo soluciones web que funcionan y se ven increíbles.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-header">
+                                <span class="service-number">01</span>
+                                <h3 class="service-title">Consulta</h3>
+                            </div>
+                            <p class="service-description">Cuéntame tu idea y juntos definimos la mejor solución para tu proyecto web.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                            </svg>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-header">
+                                <span class="service-number">02</span>
+                                <h3 class="service-title">Desarrollo</h3>
+                            </div>
+                            <p class="service-description">Creo tu sitio web con tecnologías modernas, diseño profesional y código de calidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-header">
+                                <span class="service-number">03</span>
+                                <h3 class="service-title">Lanzamiento</h3>
+                            </div>
+                            <p class="service-description">Publico tu sitio y te acompaño en el proceso para que todo funcione perfectamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="section-header">
+        <div class="badge">Portafolio</div>
+        <h2 class="section-title">
+            <span class="section-title-main">Proyectos que</span>
+            <span class="section-title-accent">Impulsan Negocios</span>
+        </h2>
+        <p class="section-description">
+            Explora algunos de los proyectos web que he creado. Desde sitios corporativos hasta plataformas personalizadas, cada uno diseñado para cumplir objetivos específicos de negocio.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://minimalmetro7.com/wp-content/uploads/2024/11/3.-Diseno.jpg" alt="Proyecto 1">
+                <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Sitio web de Empresa</h3>
+                <p class="project-description">Sitio web moderno para la presentación de los servicios de una empresa líder en construcción modular.</p>
+                <a href="https://minimalmetro7.com" class="project-link" target="_blank">
+                    Ver proyecto
+                    <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://api.mcmodels.net/storage/store-images/224/01K9Z9R0KQ0KRZ7K27RWCQNYQD.png" alt="Proyecto 2">
+                <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Tienda Online de Assets</h3>
+                <p class="project-description">E-commerce completo con pasarela de pago, gestión de inventario y panel de administración personalizado.</p>
+                <a href="https://www.orionixservices.com" class="project-link" target="_blank">
+                    Ver proyecto
+                    <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://academiaenglishworld.com/Header_new.jpg" alt="Proyecto 3">
+                <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Academia de Inglés</h3>
+                <p class="project-description">Una página web para una English world, una academia de inglés, en ella se manejan sus precios, reservas y fechas de exámenes.</p>
+                <a href="https://www.academiaenglishworld.com" class="project-link" target="_blank">
+                    Ver proyecto
+                    <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <div class="card cta-card">
+                <div class="cta-content">
+                    <h2 class="cta-title">
+                        ¿Listo para destacar <span class="cta-accent">en línea?</span>
+                    </h2>
+                    <p class="cta-description">
+                        ¿Tienes una idea o necesitas presencia web para tu negocio?
+                    </p>
+                    <p class="cta-description">
+                        Hablemos. Te ayudaré a definir la mejor solución web, planificar el proyecto y crear algo profesional que impulse tu negocio.
+                    </p>
+                    <button class="btn-primary" onclick="openContactModal()">Empezar proyecto</button>
+                </div>
+                <div class="cta-image">
+                    <img src="/img/shape.png" alt="Contactar">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="card faq-card">
+                <h2 class="faq-title">
+                    Preguntas
+                    <span class="faq-accent">Frecuentes</span>
+                </h2>
+                <p class="faq-intro">
+                    ¿Tienes dudas sobre mis servicios? Encuentra respuestas a las preguntas más habituales y descubre cómo puedo ayudarte en tu proyecto.
+                </p>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>¿Qué puedo esperar cuando trabajamos juntos?</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Comenzamos con una llamada inicial para entender tus necesidades, luego te proporciono una propuesta detallada con cronograma y presupuesto. Una vez aprobado, empiezo el desarrollo con actualizaciones periódicas y sesiones de feedback.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>¿Cuánto tiempo tardan los proyectos en completarse?</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Los plazos varían según la complejidad. Webs sencillas pueden tardar 2-4 semanas, mientras que plataformas complejas pueden requerir 3-6 meses. Te proporciono cronogramas detallados durante la propuesta.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>¿Qué herramientas usas para desarrollar?</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Uso frameworks modernos como React, Next.js y Node.js, junto con herramientas de desarrollo y servicios en la nube. La tecnología se adapta a los requisitos específicos de cada proyecto.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>¿Cuánto cuesta un proyecto típico?</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Los costes varían ampliamente según los requisitos. Webs sencillas empiezan alrededor de 90€, mientras que plataformas complejas pueden oscilar entre 300 y más de 600€. Te proporciono presupuestos detallados tras nuestro proceso inicial.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>¿Cómo gestionas los pagos?</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Generalmente trabajo con un depósito inicial del 50% y el 50% restante al completar el proyecto. Para proyectos más grandes, podemos establecer calendarios de pago basados en milestones.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>¿Puedes gestionar el soporte técnico de mi aplicación con los usuarios?</span>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Sí, ofrezco paquetes de soporte técnico y mantenimiento continuo. Pueden incluir atención a usuarios, corrección de errores, actualizaciones de funciones y monitorización del rendimiento.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="#" class="footer-logo">
+            <img src="./img/pablo_logo.png" alt="Logo" class="logo-img logo-light">
+        </a>
+        <p class="footer-description">
+            Tu socio en desarrollo web creando plataformas escalables y de alta calidad.
+        </p>
+        <p class="footer-copyright">
+            © <span id="currentYear"></span> Pablo Estévez. Todos los derechos reservados.
+        </p>
+
+        <!-- Redes Sociales -->
+        <div class="social-links">
+            <a href="https://x.com/Londraa23_" target="_blank" class="social-icon twitter">
+                <img src="./img/twitter.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/pablo-estevez-76428634a/" target="_blank" class="social-icon linkedin">
+                <img src="./img/linkedin.png" alt="">
+            </a>
+            <a href="mailto:contacto@pabloestevez.es" class="social-icon email">
+                <img src="./img/email.png" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-overlay" onclick="closeContactModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()" aria-label="Cerrar">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            
+            <h2 class="modal-title">Empezar un proyecto</h2>
+            <p class="modal-description">Cuéntame sobre tu proyecto y nos pondremos en contacto contigo pronto.</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
